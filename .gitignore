@@ -1,0 +1,66 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Visual Studio / VS Code
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# .NET / C# build output
+**/bin/
+**/obj/
+TestResults/
+*.nupkg
+*.snupkg
+packages/
+coverage/
+*.coverage
+*.coveragexml
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.tox/
+.nox/
+htmlcov/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Packaging / distribution artifacts
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+pip-log.txt
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
