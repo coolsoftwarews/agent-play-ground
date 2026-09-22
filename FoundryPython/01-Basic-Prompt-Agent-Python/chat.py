@@ -1,11 +1,10 @@
+﻿import os
+
 from azure.identity import AzureCliCredential
 from azure.ai.projects import AIProjectClient
 
 
-foundry_project_endpoint = (
-    "https://cswstestplayground.services.ai.azure.com/"
-    "api/projects/proj-default"
-)
+foundry_project_endpoint = os.environ["FOUNDRY_PROJECT_ENDPOINT"]
 
 foundry_agent_name = "python-test-agent"
 
@@ -43,3 +42,4 @@ while True:
     print()
     print(f"Agent: {response.output_text}")
     print()
+

@@ -1,14 +1,24 @@
-1. AZ login
+# Foundry C# examples
 
-2. az account show or az account show --output table
+These projects target .NET 10 and use the Azure AI Projects and Microsoft Agent Framework packages.
 
-3. cd <proj dir>
+## Projects
 
-install
-dotnet add package Azure.AI.Projects
-dotnet add package Azure.AI.Projects.Agents
-dotnet add package Azure.AI.Extensions.OpenAI
-dotnet add package Azure.Identity
+- `01-Basic-Prompt-Agent-CSharp` - Prompt Agent creation and chat examples.
+- `03-Hosted-Agent-CSharp` - Microsoft Agent Framework agent exposed through the Foundry Responses protocol and deployed as a Managed Hosted Agent.
+- `03-Hosted-Agent-Client-CSharp` - console client that calls `csharp-test-agent-managed` through the project Responses endpoint and keeps a Responses conversation ID across turns.
 
-Foundry Project Endpoint
-https://cswstestplayground.services.ai.azure.com/api/projects/proj-default
+The hosted project includes provider-side web search through `HostedWebSearchTool`; like the Python version, search is performed by Foundry rather than by local code.
+
+The hosted project uses the current Microsoft hosting integration:
+
+- `Azure.AI.Projects` prerelease
+- `Azure.Identity`
+- `Microsoft.Agents.AI`
+- `Microsoft.Agents.AI.Foundry.Hosting` prerelease
+
+The client uses `Azure.AI.Extensions.OpenAI` prerelease and `Azure.AI.Projects` to obtain a `ProjectResponsesClient` for the managed agent endpoint.
+
+
+
+

@@ -1,0 +1,7 @@
+--pre
+agent-framework
+agent-framework-foundry
+agent-framework-foundry-hosting
+azure-ai-agentserver-responses>=1.0.0b7
+azure-identity
+python-dotenv

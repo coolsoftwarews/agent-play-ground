@@ -1,0 +1,6 @@
+# Self-hosted Agent Framework runtime
+--pre
+agent-framework
+agent-framework-foundry
+azure-identity
+python-dotenv

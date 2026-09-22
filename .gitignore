@@ -64,3 +64,8 @@ pip-log.txt
 *.swp
 *.swo
 
+
+# Azure Developer CLI local state
+**/.azure/
+authlog.txt
+

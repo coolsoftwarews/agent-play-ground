@@ -5,8 +5,8 @@ using OpenAI.Responses;
 
 #pragma warning disable OPENAI001
 
-var foundryProjectEndpoint =
-    "https://cswstestplayground.services.ai.azure.com/api/projects/proj-default";
+var foundryProjectEndpoint = Environment.GetEnvironmentVariable("FOUNDRY_PROJECT_ENDPOINT")
+    ?? throw new InvalidOperationException("FOUNDRY_PROJECT_ENDPOINT is not set.");
 
 var foundryAgentName = "csharp-test-agent";
 
@@ -55,3 +55,4 @@ while (true)
     Console.WriteLine($"Agent: {response.GetOutputText()}");
     Console.WriteLine();
 }
+
